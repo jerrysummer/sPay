@@ -1,8 +1,9 @@
 import { CREATE_USER } from '../helpers/constants';
 
 const createUser = payload => {
+  const url = '/api/user/createAUser';
 
-  return fetch('/users')
+  return fetch(url)
     .then(res => res.json())
     .then(
       users => {

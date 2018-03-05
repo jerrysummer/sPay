@@ -34,14 +34,6 @@ class CreateUser extends Component {
     };
   }
 
-
-  componentDidMount() {
-    console.log('mounted')
-    fetch('/users')
-      .then(res => res.json())
-      .then(users => console.log({ users }));
-  }
-
   //-------------------------------------------------------------------------
   //------------------------- Handler methods -------------------------------
   //-------------------------------------------------------------------------
