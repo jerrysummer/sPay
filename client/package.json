@@ -9,6 +9,7 @@
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.1",
     "redux": "^3.7.2",
+    "redux-promise": "^0.5.3",
     "synapsepay": "^0.2.2"
   },
   "scripts": {
