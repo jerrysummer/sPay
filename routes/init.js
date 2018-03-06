@@ -2,6 +2,7 @@ const SynapsePay = require('synapsepay');
 const Clients = SynapsePay.Clients;
 const Helpers = SynapsePay.Helpers;
 const Users = SynapsePay.Users;
+require('dotenv').config();
 
 const client = new Clients(
   // client id should be stored as an environment variable
