@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import CreateUser from './components/CreateUser.jsx'
+import LinkUserAccount from './components/LinkUserAccount.jsx'
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           test
         </p>
         <CreateUser />
+        <LinkUserAccount />
       </div>
     );
   }

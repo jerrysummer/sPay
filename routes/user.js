@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const { client, Helpers, Users} = require('./init');
+const { client, Helpers, Users, Nodes } = require('./init');
+require('dotenv').config();
 
-/* GET users listing. */
+let user;
+let nodes;
+
 router.post('/createAUser', function (req, res, next) {
-  // console.log(process.env.CLIENT_ID === 'client_id_dcCrIB25l40VWQXRDehpHmM9j3L8KyugfxTZ0azw')
   // Create a User
 
   let { email, password, phone_numbers, legal_names } = req.body;
@@ -29,7 +31,6 @@ router.post('/createAUser', function (req, res, next) {
     }
   };
 
-  let user;
 
   Users.create(
     client,
@@ -40,25 +41,15 @@ router.post('/createAUser', function (req, res, next) {
     function (err, userResponse) {
       // error or user object
       user = userResponse;
-      console.log(userResponse)
-      if(err) {console.log('err: ',err)};
-      if (err) {
-        res.sendStatus(400);
-      }
-      res.sendStatus(200);
+      global.user = userResponse;
+      console.log('user created', typeof user, user)
+      if(err) { console.log(err) }; 
+      res.send(userResponse);
     }
   );
 
 });
 
 
-router.get('/getAllUsers', function (req, res, next) {
-  // And insert something like this instead:
-  res.json([{
-    id: 0,
-    username: "ALL USERS"
-  }
-  ]);
-});
 
 module.exports = router;
