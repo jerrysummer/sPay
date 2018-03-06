@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import CreateUser from './components/CreateUser.jsx'
 import LinkUserAccount from './components/LinkUserAccount.jsx'
+import MakePayment from './components/MakePayment.jsx'
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
         </p>
         <CreateUser />
         <LinkUserAccount />
+        <MakePayment />
       </div>
     );
   }

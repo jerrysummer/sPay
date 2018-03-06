@@ -1,4 +1,4 @@
-import { CREATE_USER, LINK_USER_ACCOUNT } from '../helpers/constants';
+import { CREATE_USER, LINK_USER_ACCOUNT, MAKE_PAYMENT } from '../helpers/constants';
 import axios from 'axios';
 
 const createUser = ( payload ) => {
@@ -24,8 +24,7 @@ const linkUserAccount = ( payload ) => {
   return axios
     .post(url, payload)
     .then((account) => {
-      console.log('this is account: ', account)
-
+      
       return {
         type: LINK_USER_ACCOUNT,
         payload: account,
@@ -36,7 +35,25 @@ const linkUserAccount = ( payload ) => {
     });
 }
 
+const makePayment = ( payload ) => {
+  const url = '/api/transaction/createTransaction';
+
+  return axios
+    .post(url, payload)
+    .then((payment) => {
+      
+      return {
+        type: MAKE_PAYMENT,
+        payload: payment,
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
+
 export {
   createUser,
-  linkUserAccount
+  linkUserAccount,
+  makePayment
 }

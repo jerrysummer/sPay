@@ -1,5 +1,5 @@
 const SynapsePay = require('synapsepay');
-const { Clients, Helpers, Users, Nodes } = SynapsePay;
+const { Clients, Helpers, Users, Nodes, Transactions } = SynapsePay;
 require('dotenv').config();
 
 const client = new Clients(
@@ -15,5 +15,6 @@ module.exports = {
   Helpers,
   client,
   Users,
-  Nodes
+  Nodes,
+  Transactions
 };
