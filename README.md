@@ -10,26 +10,21 @@ Follow onscreen instruction and fill out the necessary forms.
 Values are prepopulated for easy testing and are editable. 
 
 ### Setup
-# setup server
+
+#### setup server
 ```
 $ cd /path/to/dir
 $ yarn install
 ```
-
-# setup client
-
+#### setup client
 ```
 $ cd client
 $ yarn install
-
 ```
-
-# run app
-
+#### run app
 ```
 $ cd ..
 $ yarn dev
-
 ```
 
 Supports [`Redux DevTools Chrome Extension`](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
