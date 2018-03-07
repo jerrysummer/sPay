@@ -51,7 +51,6 @@ router.post('/', function (req, res, next) {
     function (err, userResponse) {
       // error or user object
       user = userResponse;
-      console.log('user created', typeof user, user)
       if(err) { console.log(err) }; 
       res.send(userResponse);
     }

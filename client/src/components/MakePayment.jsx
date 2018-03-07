@@ -7,7 +7,6 @@ import { connect } from 'react-redux';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 
-
 //-----------------------------------------------------------------------------------------
 //------------------------------------ Local imports --------------------------------------
 //-----------------------------------------------------------------------------------------
@@ -18,7 +17,6 @@ import { makePayment } from '../actions/actions';
 //------------------------------- MakePayment Component -------------------------------
 //-----------------------------------------------------------------------------------------
 
-
 class MakePayment extends Component {
 
   //-------------------------------------------------------------------------
@@ -28,7 +26,7 @@ class MakePayment extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      amount: 0,
+      amount: 100,
       currency: 'USD',
     };
   }
@@ -98,11 +96,5 @@ const mapStateToProps = (state, ownProps) => {
     userAccount: state.userAccount
   }
 }
-
-
-// const mapDispatchToProps = dispatch => {
-//   return {
-//   }
-// }
 
 export default connect(mapStateToProps, { makePayment })(MakePayment);

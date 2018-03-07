@@ -13,7 +13,6 @@ import {
   StepLabel,
   StepContent,
 } from 'material-ui/Stepper';
-import FlatButton from 'material-ui/FlatButton';
 import Paper from 'material-ui/Paper';
 
 //-----------------------------------------------------------------------------------------
@@ -50,32 +49,6 @@ class App extends Component {
     }
   };
 
-  renderStepActions(step) {
-    const { stepIndex } = this.state;
-
-    return (
-      <div style={{ margin: '12px 0' }}>
-        <FlatButton
-          label={stepIndex === 2 ? 'Finish' : 'Next'}
-          disableTouchRipple={true}
-          disableFocusRipple={true}
-          primary={true}
-          onClick={this.handleNext}
-          style={{ marginRight: 12 }}
-        />
-        {step > 0 && (
-          <FlatButton
-            label="Back"
-            disabled={stepIndex === 0}
-            disableTouchRipple={true}
-            disableFocusRipple={true}
-            onClick={this.handlePrev}
-          />
-        )}
-      </div>
-    );
-  }
-
   //-------------------------------------------------------------------------
   //------------------------------- Render ----------------------------------
   //-------------------------------------------------------------------------
@@ -85,7 +58,7 @@ class App extends Component {
     const style = {
       height: "auto",
       width: "auto",
-      margin: 5,
+      margin: 3,
       padding: 10,
       textAlign: 'center',
       display: 'inline-block',
@@ -95,7 +68,7 @@ class App extends Component {
     return (
       <div style={{ maxWidth: 380, maxHeight: 400, margin: 'auto' }}>
         <AppBar 
-          title="iPay"
+          title="SynapsePay"
           iconClassNameRight="muidocs-icon-navigation-expand-more"
         />
         <Stepper activeStep={stepIndex} orientation="vertical">
@@ -105,7 +78,6 @@ class App extends Component {
               <Paper style={style} zDepth={1} >
                 <CreateUser step={this.handleNext}/>
               </Paper>
-              {this.renderStepActions(0)}
             </StepContent>
           </Step>
           <Step>
@@ -114,7 +86,6 @@ class App extends Component {
               <Paper style={style} zDepth={1} >
                 <LinkUserAccount step={this.handleNext}/>
               </Paper>
-              {this.renderStepActions(1)}
             </StepContent>
           </Step>
           <Step>
@@ -123,7 +94,6 @@ class App extends Component {
               <Paper style={style} zDepth={1} >
                 <MakePayment step={this.handleNext}/>
               </Paper>
-              {this.renderStepActions(2)}
             </StepContent>
           </Step>
         </Stepper>
@@ -144,6 +114,5 @@ class App extends Component {
     );
   }
 }
-
 
 export default App;

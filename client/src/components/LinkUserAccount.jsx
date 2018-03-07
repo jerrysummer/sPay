@@ -118,22 +118,14 @@ class LinkUserAccount extends Component {
   }
 }
 
-
 //-------------------------------------------------------------------------
 //-------------------- Mapping store to ImagesDisplay's props -------------
 //-------------------------------------------------------------------------
-
 
 const mapStateToProps = (state, ownProps) => {
   return {
     currentUser: state.currentUser
   }
 }
-
-
-// const mapDispatchToProps = dispatch => {
-//   return {
-//   }
-// }
 
 export default connect(mapStateToProps, { linkUserAccount })(LinkUserAccount);

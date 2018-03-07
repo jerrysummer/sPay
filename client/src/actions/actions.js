@@ -18,12 +18,11 @@ const createUser = ( payload ) => {
 }
 
 const linkUserAccount = ( payload ) => {
-  const url = '/synapsepay/nodes/bank-account';
+  const url = '/synapsepay/nodes';
 
   return axios
     .post(url, payload)
     .then((account) => {
-      
       return {
         type: LINK_USER_ACCOUNT,
         payload: account,
@@ -40,7 +39,6 @@ const makePayment = ( payload ) => {
   return axios
     .post(url, payload)
     .then((payment) => {
-      
       return {
         type: MAKE_PAYMENT,
         payload: payment,

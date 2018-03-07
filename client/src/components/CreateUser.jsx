@@ -18,7 +18,6 @@ import { createUser } from '../actions/actions';
 //------------------------------------ CreateUser Component -------------------------------
 //-----------------------------------------------------------------------------------------
 
-
 class CreateUser extends Component {
 
   //-------------------------------------------------------------------------
@@ -28,10 +27,10 @@ class CreateUser extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      legal_name: '',
-      phone_number: '',
-      password: '',
+      email: 'javascriptTest@synapsepay.com',
+      legal_name: 'Node TestUser',
+      phone_number: 9011111111,
+      password: 'test1234',
     };
   }
 
@@ -97,11 +96,9 @@ class CreateUser extends Component {
   }
 }
 
-
 //-------------------------------------------------------------------------
 //-------------------- Mapping store to ImagesDisplay's props -------------
 //-------------------------------------------------------------------------
-
 
 const mapStateToProps = (state, ownProps) => {
   return {
