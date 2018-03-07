@@ -7,7 +7,7 @@ const defaultUser = {
   legal_name: 'Node TestUser',
   phone_number: 9011111111,
   password: 'test1234',
-}
+};
 
 const defaultAccount = {
   nickname: 'Node Library Checking Account',
@@ -15,8 +15,8 @@ const defaultAccount = {
   account_num: '72347235423',
   routing_num: '051000017',
   type: 'PERSONAL',
-  class: 'CHECKING'
-}
+  class: 'CHECKING',
+};
 
 const defaultPayment = {
   nickname: 'Node Library Checking Account',
@@ -24,8 +24,8 @@ const defaultPayment = {
   account_num: '72347235423',
   routing_num: '051000017',
   type: 'PERSONAL',
-  class: 'CHECKING'
-}
+  class: 'CHECKING',
+};
 
 export {
   CREATE_USER,
@@ -33,5 +33,5 @@ export {
   MAKE_PAYMENT,
   defaultUser,
   defaultAccount,
-  defaultPayment
-}
+  defaultPayment,
+};

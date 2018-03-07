@@ -1,12 +1,8 @@
 //-----------------------------------------------------------------------------------------
-//--------------------------------- Third party imports -----------------------------------
+// --------------------------------- Third party imports -----------------------------------
 //-----------------------------------------------------------------------------------------
 import React, { Component } from 'react';
-import './App.css';
 import AppBar from 'material-ui/AppBar';
-import CreateUser from './components/CreateUser.jsx'
-import LinkUserAccount from './components/LinkUserAccount.jsx'
-import MakePayment from './components/MakePayment.jsx'
 import {
   Step,
   Stepper,
@@ -16,13 +12,20 @@ import {
 import Paper from 'material-ui/Paper';
 
 //-----------------------------------------------------------------------------------------
-//------------------------------------- App Component -------------------------------------
+// ------------------------------------ Local imports --------------------------------------
+//-----------------------------------------------------------------------------------------
+
+import './App.css';
+import CreateUser from './components/CreateUser';
+import LinkUserAccount from './components/LinkUserAccount';
+import MakePayment from './components/MakePayment';
+//-----------------------------------------------------------------------------------------
+// ------------------------------------- App Component -------------------------------------
 //-----------------------------------------------------------------------------------------
 
 class App extends Component {
-
   //-------------------------------------------------------------------------
-  //------------------ Constructor & Lifecycle methods ----------------------
+  // ------------------ Constructor & Lifecycle methods ----------------------
   //-------------------------------------------------------------------------
 
   state = {
@@ -31,7 +34,7 @@ class App extends Component {
   };
 
   //-------------------------------------------------------------------------
-  //------------------------- Handler methods -------------------------------
+  // ------------------------- Handler methods -------------------------------
   //-------------------------------------------------------------------------
 
   handleNext = () => {
@@ -50,14 +53,14 @@ class App extends Component {
   };
 
   //-------------------------------------------------------------------------
-  //------------------------------- Render ----------------------------------
+  // ------------------------------- Render ----------------------------------
   //-------------------------------------------------------------------------
 
 
   render() {
     const style = {
-      height: "auto",
-      width: "auto",
+      height: 'auto',
+      width: 'auto',
       margin: 3,
       padding: 10,
       textAlign: 'center',
@@ -67,7 +70,7 @@ class App extends Component {
 
     return (
       <div style={{ maxWidth: 380, maxHeight: 400, margin: 'auto' }}>
-        <AppBar 
+        <AppBar
           title="SynapsePay"
           iconClassNameRight="muidocs-icon-navigation-expand-more"
         />
@@ -76,7 +79,7 @@ class App extends Component {
             <StepLabel>Create your user account</StepLabel>
             <StepContent>
               <Paper style={style} zDepth={1} >
-                <CreateUser step={this.handleNext}/>
+                <CreateUser step={this.handleNext} />
               </Paper>
             </StepContent>
           </Step>
@@ -84,7 +87,7 @@ class App extends Component {
             <StepLabel>Link your bank account</StepLabel>
             <StepContent>
               <Paper style={style} zDepth={1} >
-                <LinkUserAccount step={this.handleNext}/>
+                <LinkUserAccount step={this.handleNext} />
               </Paper>
             </StepContent>
           </Step>
@@ -92,7 +95,7 @@ class App extends Component {
             <StepLabel>Make payment to seller</StepLabel>
             <StepContent>
               <Paper style={style} zDepth={1} >
-                <MakePayment step={this.handleNext}/>
+                <MakePayment step={this.handleNext} />
               </Paper>
             </StepContent>
           </Step>
