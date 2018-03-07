@@ -1,7 +1,8 @@
 # sPay
 A payment portal using SynapseFI API following the Marketplace Flow. This mobile friend app allows you to easily pay the vendor through an intuitive flow. 
 
-React + Redux /n
+React + Redux 
+
 Node + Express
 
 ### How to use
@@ -9,9 +10,26 @@ Follow onscreen instruction and fill out the necessary forms.
 Values are prepopulated for easy testing and are editable. 
 
 ### Setup
+# setup server
 ```
-$ cd ./directory
+$ cd /path/to/dir
+$ yarn install
+```
+
+# setup client
+
+```
+$ cd client
+$ yarn install
+
+```
+
+# run app
+
+```
+$ cd ..
 $ yarn dev
+
 ```
 
 Supports [`Redux DevTools Chrome Extension`](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
