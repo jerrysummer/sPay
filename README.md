@@ -12,14 +12,17 @@ Values are prepopulated for easy testing and are editable.
 ### Setup
 
 ```
+$ cd /path/to/dir
 $ yarn install
 $ yarn dev
 ```
-Create a .env file on the server root directory with the following values filled for API:
 
+Create a .env file on the server root directory with the following values filled for API:
+```
 CLIENT_ID = 'put_your_id_here'
 CLIENT_SECRET = 'put_your_secret_here'
 FINGERPRINT = 'put_your_device_fingerprint_here'
+```
 
 Supports [`Redux DevTools Chrome Extension`](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)
 
