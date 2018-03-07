@@ -1,7 +1,7 @@
 # sPay
 A payment portal using SynapseFI API following the Marketplace Flow
 
-### How to run 
+### Setup
 cd to directory
 yarn dev
 
