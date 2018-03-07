@@ -6,7 +6,8 @@
     "start": "nodemon ./bin/www",
     "client": "cd client && yarn start",
     "server": "nodemon ./bin/www",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "postinstall": "cd client && yarn install"
   },
   "dependencies": {
     "axios": "^0.18.0",
