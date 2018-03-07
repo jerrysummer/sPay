@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { Nodes } = require('./init');
+const SynapsePay = require('synapsepay');
+const { Clients, Helpers, Users, Nodes, Transactions } = SynapsePay;
 
 router.post('/linkUserAccount', function (req, res, next) {
   // Add ACH-US Node through Account and Routing Number Details

@@ -1,7 +1,18 @@
+require('dotenv').config()
 const express = require('express');
 const router = express.Router();
-const { client, Helpers, Users, Nodes } = require('./init');
-require('dotenv').config();
+// const { client, Helpers, Users, Nodes } = require('./init');
+const SynapsePay = require('synapsepay');
+const { Clients, Helpers, Users, Nodes, Transactions } = SynapsePay;
+
+const client = new Clients(
+  // client id should be stored as an environment variable
+  process.env.CLIENT_ID,
+  // client secret should be stored as an environment variable
+  process.env.CLIENT_SECRET,
+  // is_production boolean determines sandbox or production endpoints used
+  false
+);
 
 let user;
 let nodes;
@@ -41,7 +52,6 @@ router.post('/createAUser', function (req, res, next) {
     function (err, userResponse) {
       // error or user object
       user = userResponse;
-      global.user = userResponse;
       console.log('user created', typeof user, user)
       if(err) { console.log(err) }; 
       res.send(userResponse);

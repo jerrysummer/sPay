@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { Helpers, Transactions } = require('./init');
+const SynapsePay = require('synapsepay');
+const { Clients, Helpers, Users, Nodes, Transactions } = SynapsePay;
 
 router.post('/createTransaction', function (req, res, next) {
 
@@ -43,7 +44,8 @@ router.post('/createTransaction', function (req, res, next) {
     function (err, transactionResp) {
       // error or transaction object
       transaction = transactionResp;
-      console.log('tranactoin!: ',transaction)
+      console.log('tranactoin!: ', res)
+      res.send(transactionResp);
     }
   );
 
