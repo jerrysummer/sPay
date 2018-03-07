@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const SynapsePay = require('synapsepay');
-const { Clients, Helpers, Users, Nodes, Transactions } = SynapsePay;
+const { Nodes } = SynapsePay;
 
-router.post('/linkUserAccount', function (req, res, next) {
+router.post('/bank-account', function (req, res, next) {
   // Add ACH-US Node through Account and Routing Number Details
   let { user } = req.body;
   let nodes;
-  console.log('/linkUserAccount', typeof user, user);
-  console.log('/linkUserAccount', typeof global.user, global.user);
+  console.log('/bank-account', typeof user, user);
+  console.log('/bank-account', typeof global.user, global.user);
 
   const achPayload = {
     type: 'ACH-US',

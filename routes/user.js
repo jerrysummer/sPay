@@ -1,9 +1,8 @@
 require('dotenv').config()
 const express = require('express');
 const router = express.Router();
-// const { client, Helpers, Users, Nodes } = require('./init');
 const SynapsePay = require('synapsepay');
-const { Clients, Helpers, Users, Nodes, Transactions } = SynapsePay;
+const { Clients, Helpers, Users } = SynapsePay;
 
 const client = new Clients(
   // client id should be stored as an environment variable
@@ -17,7 +16,7 @@ const client = new Clients(
 let user;
 let nodes;
 
-router.post('/createAUser', function (req, res, next) {
+router.post('/', function (req, res, next) {
   // Create a User
 
   let { email, password, phone_numbers, legal_names } = req.body;

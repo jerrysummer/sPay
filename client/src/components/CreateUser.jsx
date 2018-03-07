@@ -5,7 +5,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import TextField from 'material-ui/TextField';
-import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
+
 
 //-----------------------------------------------------------------------------------------
 //------------------------------------ Local imports --------------------------------------
@@ -48,6 +49,7 @@ class CreateUser extends Component {
 
   handleCreateUser = () => {
     this.props.createUser(this.state);
+    this.props.step();
   }
 
   //-------------------------------------------------------------------------
@@ -63,31 +65,31 @@ class CreateUser extends Component {
           type="text"
           name="email"
           onChange={this.handleInputChange}
-        /><br />
+        />
         <TextField
           hintText="Test User"
           floatingLabelText="name"
           type="text"
           name="legal_names"
           onChange={this.handleInputChange}
-        /><br />
+        />
         <TextField
           hintText="901.111.1111"
           floatingLabelText="phone number"
           type="text"
           name="phone_numbers"
           onChange={this.handleInputChange}
-        /><br />
+        />
         <TextField
           hintText="hunter2"
           floatingLabelText="password"
           type="password"
           name="password"
           onChange={this.handleInputChange}
-        /><br />
-        <FlatButton
+        />
+        <RaisedButton
           label="Register"
-          primary={true}
+          secondary={true}
           onClick={this.handleCreateUser}
         />
       </div>
@@ -105,11 +107,5 @@ const mapStateToProps = (state, ownProps) => {
   return {
   }
 }
-
-
-// const mapDispatchToProps = dispatch => {
-//   return {
-//   }
-// }
 
 export default connect(mapStateToProps, { createUser })(CreateUser);

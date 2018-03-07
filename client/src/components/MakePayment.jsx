@@ -5,7 +5,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import TextField from 'material-ui/TextField';
-import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
+
 
 //-----------------------------------------------------------------------------------------
 //------------------------------------ Local imports --------------------------------------
@@ -51,6 +52,7 @@ class MakePayment extends Component {
     }
 
     this.props.makePayment(payload);
+    this.props.step();
   }
 
   //-------------------------------------------------------------------------
@@ -75,9 +77,9 @@ class MakePayment extends Component {
           defaultValue="USD"
           onChange={this.handleInputChange}
         /><br />
-        <FlatButton
+        <RaisedButton
           label="Pay"
-          primary={true}
+          secondary={true}
           onClick={this.handleMakePayment}
         />
       </div>

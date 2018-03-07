@@ -24,10 +24,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api', index);
-app.use('/api/user', user);
-app.use('/api/node', node);
-app.use('/api/transaction', transaction);
+app.use('/', index);
+app.use('/synapsepay/users', user);
+app.use('/synapsepay/nodes', node);
+app.use('/synapsepay/transactions', transaction);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

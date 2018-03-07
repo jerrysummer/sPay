@@ -1,19 +1,17 @@
 const express = require('express');
 const router = express.Router();
 const SynapsePay = require('synapsepay');
-const { Clients, Helpers, Users, Nodes, Transactions } = SynapsePay;
+const { Helpers, Transactions } = SynapsePay;
 
-router.post('/createTransaction', function (req, res, next) {
+router.post('/', function (req, res, next) {
 
   // Create a Transaction
-
-  console.log(req.body)
 
   let { payerNode } = req.body;
 
   const createPayload = {
     to: {
-      type: 'SYNAPSE-US',
+      type: 'ACH-US',
       id: '5a9e93ed09309d00549357d3'
     },
     amount: {

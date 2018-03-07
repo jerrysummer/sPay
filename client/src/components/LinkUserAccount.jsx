@@ -5,7 +5,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import TextField from 'material-ui/TextField';
-import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
+
 
 //-----------------------------------------------------------------------------------------
 //------------------------------------ Local imports --------------------------------------
@@ -55,6 +56,7 @@ class LinkUserAccount extends Component {
     } 
 
     this.props.linkUserAccount(payload);
+    this.props.step();
   }
 
   //-------------------------------------------------------------------------
@@ -70,45 +72,45 @@ class LinkUserAccount extends Component {
           type="text"
           name="nickname"
           onChange={this.handleInputChange}
-        /><br />
+        />
         <TextField
           hintText="Node Library"
           floatingLabelText="name on account"
           type="text"
           name="name_on_account"
           onChange={this.handleInputChange}
-        /><br />
+        />
         <TextField
           hintText="72347235423"
           floatingLabelText="account number"
           type="text"
           name="account_num"
           onChange={this.handleInputChange}
-        /><br />
+        />
         <TextField
           hintText="051000017"
           floatingLabelText="routing number"
           type="text"
           name="routing_num"
           onChange={this.handleInputChange}
-        /><br />
+        />
         <TextField
           hintText="PERSONAL"
           floatingLabelText="type"
           type="text"
           name="type"
           onChange={this.handleInputChange}
-        /><br />
+        />
         <TextField
           hintText="CHECKING"
           floatingLabelText="class"
           type="text"
           name="class"
           onChange={this.handleInputChange}
-        /><br />
-        <FlatButton
+        />
+        <RaisedButton
           label="Link Account"
-          primary={true}
+          secondary={true}
           onClick={this.handleLinkUserAccount}
         />
       </div>

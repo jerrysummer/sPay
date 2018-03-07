@@ -2,12 +2,11 @@ import { CREATE_USER, LINK_USER_ACCOUNT, MAKE_PAYMENT } from '../helpers/constan
 import axios from 'axios';
 
 const createUser = ( payload ) => {
-  const url = '/api/user/createAUser';
+  const url = '/synapsepay/users';
   
   return axios
     .post(url, payload)
     .then((user) => {
-      console.log('this is user: ',user)
       return {
         type: CREATE_USER,
         payload: user.data,
@@ -19,7 +18,7 @@ const createUser = ( payload ) => {
 }
 
 const linkUserAccount = ( payload ) => {
-  const url = '/api/node/linkUserAccount';
+  const url = '/synapsepay/nodes/bank-account';
 
   return axios
     .post(url, payload)
@@ -36,7 +35,7 @@ const linkUserAccount = ( payload ) => {
 }
 
 const makePayment = ( payload ) => {
-  const url = '/api/transaction/createTransaction';
+  const url = '/synapsepay/transactions';
 
   return axios
     .post(url, payload)
