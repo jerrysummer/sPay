@@ -1,5 +1,5 @@
 # sPay
-A payment portal using SynapseFI API following the Marketplace Flow. This mobile friend app allows you to easily pay the vendor through an intuitive flow. 
+A payment portal using SynapseFI API following the Marketplace Flow. This mobile friendly app allows you to easily pay the vendor through an intuitive workflow. 
 
 React + Redux 
 
@@ -7,7 +7,8 @@ Node + Express
 
 ### How to use
 Follow onscreen instruction and fill out the necessary forms. 
-Values are prepopulated for easy testing and are editable. 
+
+Values are prepopulated for easy testing/validation and are editable. 
 
 ### Setup
 
