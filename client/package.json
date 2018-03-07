@@ -14,11 +14,6 @@
     "synapsepay": "^0.2.2"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^15.0.1",
-    "eslint-loader": "^1.8.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-react": "^7.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
