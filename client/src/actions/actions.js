@@ -13,7 +13,7 @@ const createUser = ( payload ) => {
       }
     })
     .catch((error) => {
-      console.log(error);
+      console.log('creatUser err! ',error);
     });
 }
 
@@ -29,7 +29,7 @@ const linkUserAccount = ( payload ) => {
       }
     })
     .catch((error) => {
-      console.log(error);
+      console.log('linkAcct err!', error);
     });
 }
 
@@ -45,7 +45,7 @@ const makePayment = ( payload ) => {
       }
     })
     .catch((error) => {
-      console.log(error);
+      console.log('makePayment err! ',error);
     });
 }
 

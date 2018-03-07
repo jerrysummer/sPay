@@ -51,8 +51,12 @@ router.post('/', function (req, res, next) {
     function (err, userResponse) {
       // error or user object
       user = userResponse;
-      if(err) { console.log(err) }; 
-      res.send(userResponse);
+      if (err) {
+        console.log('user err! ', err.response.text);
+        res.status(400).send(err);
+      } else if (userResponse) {
+        res.status(200).send(userResponse)
+      };
     }
   );
 

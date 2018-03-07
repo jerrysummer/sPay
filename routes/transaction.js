@@ -7,7 +7,8 @@ router.post('/', function (req, res, next) {
 
   // Create a Transaction
 
-  let { payerNode, amount } = req.body;
+  let { payerNode, payment } = req.body;
+  let { amount, currency } = payment;
 
   const createPayload = {
     to: {
@@ -16,7 +17,7 @@ router.post('/', function (req, res, next) {
     },
     amount: {
       amount,
-      currency: 'USD'
+      currency
     },
     extra: {
       supp_id: '1283764wqwsdd34wd13212',
@@ -42,8 +43,12 @@ router.post('/', function (req, res, next) {
     function (err, transactionResp) {
       // error or transaction object
       transaction = transactionResp;
-      if(err) console.log('err! ', err);
-      res.send(transactionResp);
+      if(err) {
+        console.log('payment err! ', err.response.text);
+        res.status(400).send(err);
+      } else if(transactionResp) {
+        res.status(200).send(transactionResp)
+      };
     }
   );
 

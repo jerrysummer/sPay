@@ -26,7 +26,7 @@ class MakePayment extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      amount: 100,
+      amount: '100',
       currency: 'USD',
     };
   }
@@ -45,7 +45,7 @@ class MakePayment extends Component {
 
   handleMakePayment = () => {
     let payload = {
-      amount: this.state,
+      payment: this.state,
       payerNode: this.props.userAccount
     }
 

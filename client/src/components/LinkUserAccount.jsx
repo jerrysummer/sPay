@@ -82,6 +82,7 @@ class LinkUserAccount extends Component {
         />
         <TextField
           hintText="72347235423"
+          defaultValue="72347235423"
           floatingLabelText="account number"
           type="text"
           name="account_num"
@@ -89,6 +90,7 @@ class LinkUserAccount extends Component {
         />
         <TextField
           hintText="051000017"
+          defaultValue="051000017"
           floatingLabelText="routing number"
           type="text"
           name="routing_num"
@@ -96,6 +98,7 @@ class LinkUserAccount extends Component {
         />
         <TextField
           hintText="PERSONAL"
+          defaultValue="PERSONAL"
           floatingLabelText="type"
           type="text"
           name="type"
@@ -103,6 +106,7 @@ class LinkUserAccount extends Component {
         />
         <TextField
           hintText="CHECKING"
+          defaultValue="CHECKING"
           floatingLabelText="class"
           type="text"
           name="class"

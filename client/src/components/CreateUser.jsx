@@ -28,8 +28,8 @@ class CreateUser extends Component {
     super(props);
     this.state = {
       email: 'javascriptTest@synapsepay.com',
-      legal_name: 'Node TestUser',
-      phone_number: 9011111111,
+      legal_names: 'Node TestUser',
+      phone_numbers: '9011111111',
       password: 'test1234',
     };
   }
@@ -74,13 +74,15 @@ class CreateUser extends Component {
         />
         <TextField
           hintText="901.111.1111"
+          defaultValue="9011111111"
           floatingLabelText="phone number"
           type="text"
           name="phone_numbers"
           onChange={this.handleInputChange}
         />
         <TextField
-          hintText="hunter2"
+          hintText="test1234"
+          defaultValue="test1234"
           floatingLabelText="password"
           type="password"
           name="password"

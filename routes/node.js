@@ -38,8 +38,12 @@ router.post('/', function (req, res, next) {
       // error or node object
       // node will only have RECEIVE permission until verified with micro-deposits
       nodes = nodesResponse;
-      if(err) { console.log('err! ', err) };
-      res.send( nodesResponse );
+      if(err) { 
+        console.log('account err! ', err.response.text);
+        res.status(400).send(err);
+      } else if(nodesResponse) {
+        res.status(200).send( nodesResponse )
+      };
     }
   );
 });
