@@ -1,1 +1,1 @@
-// please referece another app for tests
+// please referece another app (e.g. minesweeper) for tests examples
