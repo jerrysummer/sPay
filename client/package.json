@@ -13,8 +13,7 @@
     "redux-promise": "^0.5.3",
     "synapsepay": "^0.2.2"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

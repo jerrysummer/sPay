@@ -4,7 +4,6 @@ const SynapsePay = require('synapsepay');
 const { Helpers, Transactions } = SynapsePay;
 
 router.post('/', function (req, res, next) {
-
   // Create a Transaction
 
   let { payerNode, payment } = req.body;
